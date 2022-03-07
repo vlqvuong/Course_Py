@@ -27,3 +27,14 @@ print(states_of_america)
 # Dùng list.remove(x) để bỏ x ra khỏi list
 # states_of_america.pop(2)
 # Dùng list.pop(i) để bỏ vị trí i trong list, nếu chỉ goxlisst.pop() thì sẽ bỏ vị trí cuỗi cùng trong list
+
+# IndexError: ví dụ 1 list có 50 (Index từ 0-49) thì nếu ta truy xuất Index 50 sẽ xuất hiện lỗi IndexError. vì Index 50 không có trong list (Out Of Range)
+
+# Nested List: kết hợp 2 list thành 1 list
+# EX:
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+# Kết hợp 2 list fruit vafvegetables vào list dirty_dozen
+print(dirty_dozen)
