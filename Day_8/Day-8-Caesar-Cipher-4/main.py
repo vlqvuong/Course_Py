@@ -4,41 +4,32 @@ def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
   if cipher_direction == "decode":
     shift_amount *= -1
+    # Nếu là decode thì shift sẽ âm để có thế lui ký tự trong list alphabet.
   for char in start_text:
-    #TODO-3: What happens if the user enters a number/symbol/space?
-    #Can you fix the code to keep the number/symbol/space when the text is encoded/decoded?
-    #e.g. start_text = "meet me at 3"
-    #end_text = "•••• •• •• 3"
+    # Nếu trong text ta muốn decode hay encode có:dấu " ", ký tự hay số, thì ta giữ nguyên các ký tự, số và dấu cách đó.
     if char in alphabet:
       position = alphabet.index(char)
       new_position = position + shift_amount
       end_text += alphabet[new_position]
     else:
-      end_text += char  
-      
+      end_text += char     
   print(f"Here's the {cipher_direction}d result: {end_text}")
 
-#TODO-1: Import and print the logo from art.py when the program starts.
+# Xuất logo từ thư mục art bên ngoài main, sau đó in logo.
 from art import logo
 print(logo)
-#TODO-4: Can you figure out a way to ask the user if they want to restart the cipher program?
-#e.g. Type 'yes' if you want to go again. Otherwise type 'no'.
-#If they type 'yes' then ask them for the direction/text/shift again and call the caesar() function again?
-#Hint: Try creating a while loop that continues to execute the program if the user types 'yes'.
+# Nếu ta muốn nhập "yes" để tiếp tục decode và "no" để dừng. thì tạo vòng lặp while, tạo biến continues = True, luôn đúng, và khi nhập "no" thì continues = False
 continues = True
 while continues:
   direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
   text = input("Type your message:\n").lower()
   shift = int(input("Type the shift number:\n"))
-  
-  #TODO-2: What if the user enters a shift that is greater than the number of letters in the alphabet?
-  #Try running the program and entering a shift number of 45.
-  #Add some code so that the program continues to work even if the user enters a shift number greater than 26. 
-  #Hint: Think about how you can use the modulus (%).
+# nếu nhập shift lớn hơn 26 thì ta chia số đó cho 26 lấy số dư, thì số chia chia 26 lấy số dư sẽ từ 0 đến 25, nắm trong khoảng 0-26 nên sẽ không bị lỗi nữa.
   if shift > 26:
     shift = shift % 26
   caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
-  restar = input("Type 'yes' if you want to go again. Otherwise type 'no'").lower()
+  restar = input("Type 'yes' if you want to go again. Otherwise type 'no'\n").lower()
+  # nhập "yes" or "no" vào biến restar để tiếp tục hoặc dừng encode và decode.
   if restar == "no":
     continues = False
     print("Goodbye!")
