@@ -1,0 +1,9 @@
+1. In logo của trò chơi.
+2. Chọn ra 1 số ngẫu nhiên từ 1 đến 100.
+3. Cho người chơi chọn độ khó cho game, nếu là difficulty thì có 5 lượt đoán, nếu easy thì có 10 lượt.
+4. Tạo 1 hàm có tên là Check_guess để kiểm tra xem số nhập vào là lớn hơn hay bé hơn số random ra ban đầu:
+   + Nếu lớn hơn thì return Too high
+   + Nếu bé hơn thì return Too low.
+5. Tạo 1 vòng lặp chạy cho đến khi hết lượt chơi thì dừng và print: "You're run out of guess, you lose."
+   + Trong vòng lặp đó ta cho nhập số và lần lượt kiểm tra xem số đó bằng hay lớn hơn hay nhỏ hơn và cho ra kết quả tương ứng.
+   + Vòng lặp kết thúc khi hết lượt đoán hay đoán đúng.
