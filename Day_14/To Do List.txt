@@ -1,0 +1,11 @@
+1. Xuất các hình ảnh logo từ art ra để in ra.
+2. Xuất hàm random vì cần dùng để chọn random ra bên B để so sánh với bên A.
+3. In logo game
+4. Chọn ngẫu nhiên 1 bên A để tiến hành game, các thông tin cần in ra là: Tên, Là gì, Đến từ đâu
+5. In logo VS
+6. Chọn ngẫu nhiên bên B và in rõ các thông tin để so sánh với bên A
+7. Nhập 1 lựa chọn "Who has more followers? Type 'A' or 'B': "
+8. Nếu nhập đúng bên có số cao hơn, in "You're right! Current score: 1."ra, tăng score lên 1 đơn vị.
+Rồi tiếp tục chuyển Bên B thành A, lựa chọn lại ngẫu nhiên bên B lại để tiến hành so sánh tiếp.
+Cứ tiếp diễn đến khi nào đoán sai
+9. Nếu đoán sai in "Sorry, that's wrong. Final score: 3" số điểm cuối cùng ra.
