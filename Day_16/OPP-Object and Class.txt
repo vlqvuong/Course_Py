@@ -1,0 +1,5 @@
+Object: những gì đối tượng có và những gì đối tượng có thể làm.
+	+ Những thứ mà đối tượng có gọi là các thuộc tính là các biến.
+	+ Những thứ mà đối tượng có thể làm là các phương pháp. Ở đây sẽ là các function.
+Chúng ta có thể tạo ra nhiều phiên bản của cùng 1 đối tượng. Gọi là Class.
+Ví dụ từ đối tượng người phục vụ, ta có thể tạo ra người phục vụ A, B,...

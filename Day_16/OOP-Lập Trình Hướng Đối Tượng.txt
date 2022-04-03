@@ -1,0 +1,3 @@
+Chúng ta có thể chia 1 Task lớn thành nhiều task nhỏ hơn.
+Mỗi task nhỏ được làm bởi 1 cá nhân nào đó.
+Và các task này có thể tái sử dụng vào 1 task lớn khác nào đó, mà trong task lớn có các task tương tự như task nhỏ đó.
