@@ -21,7 +21,8 @@ def learn_word():
     window.after_cancel(flip_timer)
     word_picked = random.choice(data_dict)
     canvas.itemconfig(title_text, text="English", fill="black")
-    canvas.itemconfig(word_text, text=word_picked["English"], fill="black")
+    canvas.itemconfig(ipa_text, text=word_picked["IPA"], fill="black")
+    canvas.itemconfig(learn_text, text=word_picked["English"], fill="black")
     canvas.itemconfig(card, image=card_front_image)
     flip_timer = window.after(3000, func=mean_word)
 
@@ -29,7 +30,7 @@ def learn_word():
 def mean_word():
     canvas.itemconfig(card, image=card_back_image)
     canvas.itemconfig(title_text, text="Vietnamese", fill="white")
-    canvas.itemconfig(word_text, text=word_picked["Vietnamese"], fill="white")
+    canvas.itemconfig(learn_text, text=word_picked["Vietnamese"], fill="white")
 
 
 def is_known():
@@ -48,8 +49,9 @@ flip_timer = window.after(3000, func=mean_word)
 canvas = Canvas(width=800, height=526)
 card_front_image = PhotoImage(file="images/card_front.png")
 card = canvas.create_image(400, 263, image=card_front_image)
-title_text = canvas.create_text(400, 150, text="", font=("Arial", 40, "italic"))
-word_text = canvas.create_text(400, 263, text="", font=("Arial", 30, "bold"))
+title_text = canvas.create_text(400, 150, text="", font=("Arial", 20, "italic"))
+ipa_text = canvas.create_text(400, 225, text="", font=("Arial", 20, "italic"))
+learn_text = canvas.create_text(400, 300, text="", font=("Arial", 30, "bold"))
 canvas.config(background=BACKGROUND_COLOR, highlightthickness=0)
 canvas.grid(column=0, row=0, columnspan=2)
 card_back_image = PhotoImage(file="images/card_back.png")
